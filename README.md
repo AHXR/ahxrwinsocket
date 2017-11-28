@@ -1,11 +1,14 @@
 # ahxrwinsocket - Light C++ Winsock Wrapper Library
 
 ```c++
+// client_example.cpp
 #include				"ahxrwinsock.h"
 #include				<string>
 
 using namespace	std;
 void onClientConnect();
+void onClientReceiveData( char * data );
+void onClientSendData( bool result, const char * dataSent );
 
 int main()
 {
@@ -48,6 +51,18 @@ int main()
 
 	system("pause");
     return 0;
+}
+
+void onClientConnect() {
+	....
+}
+
+void onClientSendData( bool result, const char * dataSent ) {
+	....
+}
+
+void OnClientReceiveData( char * data ) {
+	....
 }
 ```
 
