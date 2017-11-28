@@ -148,7 +148,7 @@ void close();
 
 **init** takes a callback argument by FPCLIENT_CB. This callback will trigger once the client has connected to the server. The send_data function is self-explanatory. However, I've created separate methods
 that control whether you want a callback to used once the data is sent. By default, the client does not automatically listen for send that is sent from the server. This is why the listen function is here. 
-This function accepts a response callback and is threaded by default. Example (see client_example for a full example):
+This function accepts a response callback and is threaded by default. Example (see **client_example.cpp** for a full example):
 
 ```c++
 void onClientConnect();
