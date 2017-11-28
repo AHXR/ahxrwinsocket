@@ -1,7 +1,6 @@
 # ahxrwinsocket - Light C++ Winsock Wrapper Library
 
 ```c++
-// client_example.cpp
 #include				"ahxrwinsock.h"
 #include				<string>
 
