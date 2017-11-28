@@ -4,8 +4,8 @@
 #include				"ahxrwinsock.h"
 #include				<string>
 
-using namespace			std;
-void					onClientConnect();
+using namespace	std;
+void onClientConnect();
 
 int main()
 {
