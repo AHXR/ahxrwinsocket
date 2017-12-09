@@ -91,7 +91,7 @@ bool __AHXRSOCKET__::__createserver(AHXRSERVER * const & server_class, PCSTR por
 		CreateThread(0, 0, __AHXRSOCKET__::__t__createServerRes, s_params, 0, 0);
 		
 		if( fpConnected != NULL )
-			fpConnected(res);
+			fpConnected(Socket_Client, res);
 	}
 	closesocket(Socket_Listen);
 	WSACleanup();
@@ -143,10 +143,10 @@ void __AHXRSOCKET__::cleanWSA(PADDRINFOA pAddr, SOCKET s) {
 #else
 	printf("%s %d\r\n", AHXRSOCKET_PREFIX, WSAGetLastError());
 #endif
-
-	freeaddrinfo(pAddr);
-	WSACleanup();
-
-	if (s != INVALID_SOCKET)
+	
+	if (s != INVALID_SOCKET) {
+		freeaddrinfo(pAddr);
 		closesocket(s);
+	}
+	WSACleanup();
 }

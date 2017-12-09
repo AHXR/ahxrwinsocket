@@ -137,13 +137,12 @@ bool AHXRCLIENT::init(PCSTR server, PCSTR port, int protocol, FPCLIENT_CB fpCB) 
 		break;
 	}
 
-	freeaddrinfo(res);
-
 	if (Socket_Client == INVALID_SOCKET) {
 		__AHXRSOCKET__::cleanWSA(res);
 		return false;
 	}
 
+	freeaddrinfo(res);
 	Client_Callback = fpCB;
 	fpCB();
 	return true;

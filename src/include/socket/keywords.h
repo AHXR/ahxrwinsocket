@@ -1,7 +1,7 @@
 #pragma once
 
 typedef void(*FPCLIENT_CB) ();
-typedef void(*FPC_CALLBACK) (addrinfo* addressInfo);
+typedef void(*FPC_CALLBACK) (SOCKET clientSocket, addrinfo* addressInfo);
 typedef void(*FPS_CALLBACK) (SOCKET clientSocket, addrinfo * addressInfo, char * data);
 typedef void(*FP_RES) (char * recData);
 typedef void(*FPCLIENT_T) (bool result, const char * dataSent);

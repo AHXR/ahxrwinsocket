@@ -51,13 +51,13 @@ namespace __AHXRSOCKET__ {
 	public class Client 
 	{
 		private:
-			SOCKET			Socket_Client;
 			FPCLIENT_CB		Client_Callback;
 			FPCLIENT_T		Toggle_Callback;
 			bool			b_toggle;
 			bool			b_sd;
 
 		public: 
+			SOCKET			Socket_Client;
 			bool			init					( PCSTR server, PCSTR port, int protocol, FPCLIENT_CB fpCB );
 			bool			send_data				( const char * sendChar );
 			void			set_toggle_callback		( FPCLIENT_T pointerFunc );
