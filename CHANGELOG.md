@@ -1,4 +1,4 @@
-12/9/2017 - 11
+12/9/2017 - 1.1
 
 - Fixed invalid socket crashing issues
 - Client socket access is now public
